@@ -110,7 +110,6 @@
 
 /* ── Scroll reveal (IntersectionObserver) ──────────────────── */
 (function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const selectors = [
     'section > .container > h2',
