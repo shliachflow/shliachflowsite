@@ -293,35 +293,32 @@ h3 {
   gap: var(--sp-3);
 }
 
-.logo-wordmark {
-  display: flex; align-items: center; gap: 8px;
-  flex-shrink: 0;
-  font-family: var(--font-display);
-  font-size: 19px; font-weight: 700; letter-spacing: -0.01em;
-}
-.logo-icon    { width: 26px; height: 26px; flex-shrink: 0; }
-.logo-shliach { color: #FFFFFF; transition: color 0.25s ease; }
-.logo-flow    { color: var(--color-accent-blue); }
-.logo-path-main { stroke: #FFFFFF; transition: stroke 0.25s ease; }
-.logo-path-blue { stroke: var(--color-accent-blue); }
-
 .logo-img-dark {
-  display: none;
+  display: block;
   height: 30px;
   width: auto;
+  transition: filter 0.25s ease;
 }
 
-#nav.nav--scrolled .logo-svg-part { display: none; }
-#nav.nav--scrolled .logo-img-dark { display: block; }
+/* On hero (transparent nav): invert PNG to white */
+#nav:not(.nav--scrolled) .logo-img-dark {
+  filter: brightness(0) invert(1);
+}
 
-#nav:not(.nav--scrolled) { background: transparent; }
+/* On scrolled (light nav): show PNG as-is (dark) */
+#nav.nav--scrolled .logo-img-dark {
+  filter: none;
+}
+
+/* Subtle dark gradient behind nav on hero so logo is always readable */
+#nav:not(.nav--scrolled) {
+  background: linear-gradient(180deg, rgba(10,15,35,0.45) 0%, transparent 100%);
+}
 
 #nav.nav--scrolled {
   background: var(--color-bg);
   box-shadow: var(--shadow-sm);
 }
-#nav.nav--scrolled .logo-shliach       { color: var(--color-text); }
-#nav.nav--scrolled .logo-path-main     { stroke: var(--color-dark); }
 #nav.nav--scrolled .nav-links a        { color: var(--color-text-muted); }
 #nav.nav--scrolled .nav-links a:hover  { color: var(--color-accent); }
 #nav.nav--scrolled .nav-hamburger span { background: var(--color-text); }
@@ -926,7 +923,13 @@ h3 {
   gap: var(--sp-6);
 }
 
-.footer-brand .logo-wordmark { margin-bottom: 10px; }
+.footer-logo-img {
+  display: block;
+  height: 30px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  margin-bottom: 10px;
+}
 .footer-tagline { font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.38); font-style: italic; }
 
 .footer-col h4 {
