@@ -312,7 +312,9 @@ h3 {
 
 /* Subtle dark gradient behind nav on hero so logo is always readable */
 #nav:not(.nav--scrolled) {
-  background: linear-gradient(180deg, rgba(10,15,35,0.45) 0%, transparent 100%);
+  background: rgba(10, 15, 35, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 #nav.nav--scrolled {
