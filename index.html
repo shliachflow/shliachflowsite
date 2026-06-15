@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShliachFlow — Digital Services for Chabad Shluchim</title>
+  <meta name="description" content="Websites, systems, content, and design for Chabad shluchim and Jewish nonprofits. Built by a fellow shliach in San Pedro, CA.">
+  <meta property="og:title" content="ShliachFlow — Digital Services for Chabad Shluchim">
+  <meta property="og:description" content="You didn't sign up to be the web guy. I handle the digital side — websites, systems, content, and design — and you don't have to explain what a Chabad House is.">
+  <meta property="og:url" content="https://shliachflow.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://shliachflow.com/assets/headshot.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "ShliachFlow",
+        "url": "https://shliachflow.com",
+        "logo": "https://shliachflow.com/assets/logo-dark.png",
+        "description": "Digital services for Chabad shluchim and Jewish nonprofits — websites, systems, content, and design.",
+        "email": "info@shliachflow.com",
+        "telephone": "+13109355236",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "817 W 9th St",
+          "addressLocality": "San Pedro",
+          "addressRegion": "CA",
+          "postalCode": "90731",
+          "addressCountry": "US"
+        },
+        "sameAs": ["https://www.linkedin.com/in/ycshuchat/"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"What is ShliachFlow?","acceptedAnswer":{"@type":"Answer","text":"A digital services business for Chabad shluchim and Jewish nonprofits. Websites, systems, content, design, and tech support — by someone who already understands the world you're operating in."}},
+          {"@type":"Question","name":"What kind of projects do you handle?","acceptedAnswer":{"@type":"Answer","text":"Websites, systems setup and consulting, writing and content, design, tech troubleshooting, and more. If it's digital and your Chabad House needs it, reach out."}},
+          {"@type":"Question","name":"Who is this really for?","acceptedAnswer":{"@type":"Answer","text":"Shluchim and Jewish nonprofit leaders who want professional work done right — without managing it themselves or explaining the context from scratch."}},
+          {"@type":"Question","name":"I don't know what I need. Can you still help?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tell me the problem you're trying to solve and I'll figure out the rest. You don't need to know the technical details — that's my job."}},
+          {"@type":"Question","name":"How does pricing work?","acceptedAnswer":{"@type":"Answer","text":"Every project gets a flat quote upfront. I scope the work, give you a number, and that's what you pay. No hourly billing, no surprises."}},
+          {"@type":"Question","name":"Do you offer ongoing support packages?","acceptedAnswer":{"@type":"Answer","text":"I'm exploring monthly support options for clients who need regular help. It's not a formal offering yet — if you're interested, message me on WhatsApp."}},
+          {"@type":"Question","name":"Do you offer revisions?","acceptedAnswer":{"@type":"Answer","text":"Yes. Reasonable revisions are part of the process. I'd rather get it right than hand you something that doesn't work."}},
+          {"@type":"Question","name":"Who owns the work once it's done?","acceptedAnswer":{"@type":"Answer","text":"You do. Once the project is complete and paid for, everything is yours."}},
+          {"@type":"Question","name":"How do we communicate during a project?","acceptedAnswer":{"@type":"Answer","text":"WhatsApp, voice notes, email — whatever works for you. I want to start with a clear picture before anything begins."}},
+          {"@type":"Question","name":"What's your typical turnaround time?","acceptedAnswer":{"@type":"Answer","text":"It depends on scope. Smaller projects can move quickly; larger ones take more time. I'll give you a realistic timeline when we scope the project."}},
+          {"@type":"Question","name":"Can you help with something I already have?","acceptedAnswer":{"@type":"Answer","text":"Yes. Happy to improve, update, or fix something existing — no need to start from scratch."}},
+          {"@type":"Question","name":"Do you work with people outside of Chabad?","acceptedAnswer":{"@type":"Answer","text":"Yes. I work primarily with Chabad shluchim but I'm happy to work with any Jewish nonprofit or organization with similar needs."}},
+          {"@type":"Question","name":"What platforms and systems do you work with?","acceptedAnswer":{"@type":"Answer","text":"ChabadOne, ChabadSuite, Squarespace, GitHub-hosted sites, Google Workspace, donation platforms, email marketing tools, and more."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════════════════════ -->
+  <header id="nav" role="banner">
+    <div class="nav-inner">
+      <!-- REPLACE WITH LOGO PNG when transparent PNG is provided
+           To switch: remove the logo-wordmark block below and uncomment:
+           <a href="index.html" aria-label="ShliachFlow home">
+             <img src="assets/logo-dark.png" alt="ShliachFlow" class="logo-img-dark" style="height:32px;">
+           </a>
+      -->
+      <a href="index.html" class="logo-wordmark" aria-label="ShliachFlow home">
+        <!-- SVG wordmark: visible on dark/transparent hero nav -->
+        <svg class="logo-icon logo-svg-part" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path class="logo-path-blue" d="M8 7C8 7 6 9 6 12C6 15.5 9 17 12 17C15 17 18 18.5 18 21.5C18 24 16 26 14 26" stroke-width="2.4" stroke-linecap="round"/>
+          <path class="logo-path-main" d="M20 21C20 21 22 19 22 16C22 12.5 19 11 16 11C13 11 10 9.5 10 6.5C10 4 12 2 14 2" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-shliach logo-svg-part">Shliach</span><span class="logo-flow logo-svg-part">Flow</span>
+        <!-- PNG logo: visible when nav scrolls to light background -->
+        <img src="assets/logo-dark.png" alt="ShliachFlow" class="logo-img-dark">
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="https://wa.me/13109355236" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Let's Talk</a>
+
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="#services">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/13109355236" class="btn btn-primary" target="_blank" rel="noopener">Let's Talk on WhatsApp</a>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       1. HERO
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-labelledby="hero-headline">
+
+    <!-- Animated mesh gradient background -->
+    <div class="hero-bg" aria-hidden="true"></div>
+    <!-- Grain texture overlay -->
+    <div class="hero-grain" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">Built by a fellow shliach. Boosted by AI.</p>
+
+      <h1 class="hero-headline" id="hero-headline">
+        <span class="word">Simplify.</span>
+        <span class="word">Solve.</span>
+        <span class="word flow-word">Flow.</span>
+      </h1>
+
+      <p class="hero-sub">
+        You're already juggling shiurim, fundraising, Yomim Tovim, and everything
+        else that comes with the job. I handle the digital side — and you don't
+        have to explain what a Chabad House is.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://wa.me/13109355236" class="btn btn-primary" target="_blank" rel="noopener">
+          WhatsApp: (310) 935-5236
+        </a>
+        <a href="portfolio.html" class="btn btn-ghost">See My Work</a>
+      </div>
+
+      <!-- Flow line — brand moment at bottom of hero -->
+      <div class="hero-flow-line" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none"
+             xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path class="flow-path"
+            d="M0,30 C240,8 480,52 720,30 C960,8 1200,52 1440,30"
+            stroke="rgba(224,120,32,0.2)"
+            stroke-width="1.5"
+            stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       2. INTRO
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="intro" aria-label="Introduction">
+    <div class="container">
+      <div class="intro-inner reveal">
+        <p class="intro-headline">
+          Because You Didn't Sign Up To Be the <span class="accent-text">Web Guy</span> Too.
+        </p>
+        <p class="intro-body">
+          You shouldn't have to become an expert in website builders, email platforms,
+          and design software to run a Chabad House.
+        </p>
+        <p class="intro-body">
+          I take care of the digital side — so you can focus on what you actually came here to do.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       3. SERVICES
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="services" aria-labelledby="services-title">
+    <div class="container">
+      <span class="section-label reveal">What I Do</span>
+      <h2 id="services-title" class="reveal">Services</h2>
+
+      <!-- Featured — dark card, amber left border, full-width -->
+      <div class="service-featured reveal">
+        <div>
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+               stroke="var(--color-accent)" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <rect x="4" y="8" width="40" height="32" rx="3"/>
+            <line x1="4" y1="17" x2="44" y2="17"/>
+            <circle cx="10.5" cy="12.5" r="1.5" fill="var(--color-accent)" stroke="none"/>
+            <circle cx="16"   cy="12.5" r="1.5" fill="var(--color-accent)" stroke="none"/>
+            <circle cx="21.5" cy="12.5" r="1.5" fill="var(--color-accent)" stroke="none"/>
+            <line x1="10" y1="24" x2="30" y2="24"/>
+            <line x1="10" y1="29" x2="38" y2="29"/>
+            <line x1="10" y1="34" x2="22" y2="34"/>
+          </svg>
+          <h3>Website Design &amp; Management</h3>
+          <p>A Chabad House website needs to do real things — accept donations, list events, tell people when Shabbos starts, and make a strong first impression. I build sites that are modern, clean, and professional, and I keep them running.</p>
+        </div>
+        <div>
+          <span class="platforms-label">Platforms I work with</span>
+          <p>ChabadOne, ChabadSuite, Squarespace, custom GitHub-hosted sites, and more. Some platforms offer more design flexibility than others — I get the best possible result on whatever system makes sense for you.</p>
+        </div>
+      </div>
+
+      <!-- Services grid — no cards, no borders, whitespace is the separator -->
+      <div class="services-grid">
+
+        <div class="service-item reveal stagger-child">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+               stroke="var(--color-accent)" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="24" cy="10" r="5"/>
+            <circle cx="12" cy="36" r="5"/>
+            <circle cx="36" cy="36" r="5"/>
+            <line x1="20.5" y1="14.3" x2="15.5" y2="31.7"/>
+            <line x1="27.5" y1="14.3" x2="32.5" y2="31.7"/>
+            <line x1="17"   y1="36"   x2="31"   y2="36"/>
+          </svg>
+          <h3>Systems Setup &amp; Consulting</h3>
+          <p>The right systems make your Chabad House run smoother — donation platforms, email marketing, forms, workflows, automations, AI tools. Not sure what you need? That's what the consulting is for.</p>
+        </div>
+
+        <div class="service-item reveal stagger-child">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+               stroke="var(--color-accent)" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M24 5 L40 24 L24 43 L8 24 Z"/>
+            <line x1="24" y1="5"  x2="24" y2="36"/>
+            <line x1="19" y1="33" x2="24" y2="40"/>
+            <line x1="29" y1="33" x2="24" y2="40"/>
+          </svg>
+          <h3>Writing &amp; Content</h3>
+          <p>Program guides, donor letters, booklets, announcements, translated materials. I leverage AI to write and refine copy efficiently — accurate, on-brand, and reads naturally. Available in English, Hebrew, and Spanish.</p>
+        </div>
+
+        <div class="service-item reveal stagger-child">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+               stroke="var(--color-accent)" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="24" cy="24" r="18"/>
+            <path d="M24 14 L34 31 L14 31 Z"/>
+            <line x1="6" y1="24" x2="42" y2="24"/>
+          </svg>
+          <h3>Design &amp; Branding</h3>
+          <p>Flyers, logos, event programs, social graphics, brand identity. Work that looks intentional — not like it came from a template. Best suited for ongoing design needs or larger brand projects.</p>
+        </div>
+
+        <div class="service-item reveal stagger-child">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+               stroke="var(--color-accent)" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <polygon points="24,5 38,13 38,29 24,37 10,29 10,13"/>
+            <circle cx="24" cy="21" r="6"/>
+            <line x1="24" y1="37" x2="24" y2="44"/>
+            <line x1="20" y1="42" x2="28" y2="42"/>
+          </svg>
+          <h3>Tech Troubleshooting</h3>
+          <p>Something's broken or not working right. Reach out — I'll figure it out.</p>
+        </div>
+
+        <div class="service-item reveal stagger-child">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+               stroke="var(--color-accent)" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="14" cy="28" r="3.5" fill="var(--color-accent)" stroke="none"/>
+            <path d="M21 21 C25 17 25 33 21 37"/>
+            <path d="M27 16 C33 11 33 39 27 43"/>
+            <path d="M33 11 C41  6 41 44 33 49"/>
+          </svg>
+          <div>
+            <span class="service-addon-label">Add-on</span>
+            <h3>Digital Marketing Assets &amp; Ads</h3>
+          </div>
+          <p>Graphics for campaigns, creatives for fundraiser pushes, Facebook ad setup. I produce the assets and get campaigns running — I don't manage ongoing ad accounts, but I'll give you everything to run them yourself.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       4. THREE-TIER SERVICE EXPLANATION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="service-tiers" aria-labelledby="tiers-title">
+    <div class="container">
+      <span class="section-label reveal">How Websites Work</span>
+      <h2 id="tiers-title" class="reveal">Three Ways to Build a Site</h2>
+
+      <div class="tiers-grid">
+
+        <!-- Tier 1 — Custom Code -->
+        <div class="tier-card reveal">
+          <span class="tier-number">Tier 1</span>
+          <h3 class="tier-name">Custom Code Site</h3>
+          <p class="tier-desc">Built from scratch in code. Hosted free on GitHub Pages. No platform fees, no monthly costs, no template constraints. Most advanced design possible.</p>
+
+          <div class="tier-options">
+            <div class="tier-option">
+              <span class="tier-option-dot"></span>
+              <span><strong>Managed by ShliachFlow</strong> — Client sends requests for text corrections, photo swaps, date updates. Quick and simple for most ongoing needs.</span>
+            </div>
+            <div class="tier-option">
+              <span class="tier-option-dot"></span>
+              <span><strong>Limited front-end CMS</strong> — ShliachFlow can set up a lightweight CMS so the client can update specific fields without touching code. Handles 80% of real update needs.</span>
+            </div>
+            <div class="tier-option">
+              <span class="tier-option-dot"></span>
+              <span><strong>Client edits the code</strong> — Possible but at the client's own risk.</span>
+            </div>
+          </div>
+
+          <div class="tier-best-for">
+            <span class="tier-best-for-label">Best for</span>
+            <p>Camps, event microsites, one-time dinners, programs that don't need frequent complex layout changes, any project where design quality matters more than self-editing flexibility.</p>
+          </div>
+        </div>
+
+        <!-- Tier 2 — Platform Build -->
+        <div class="tier-card tier-card--muted reveal">
+          <span class="tier-number">Tier 2</span>
+          <h3 class="tier-name">Platform Build</h3>
+          <p class="tier-desc">Squarespace, Wix, or similar. Client or their office gets a real drag-and-drop editor and can update the site independently. Platform fees typically $15–30/month. Design is constrained by what the platform allows.</p>
+
+          <div class="tier-best-for">
+            <span class="tier-best-for-label">Best for</span>
+            <p>Active community sites with frequent updates that need to be managed independently without coming back to ShliachFlow every time.</p>
+          </div>
+        </div>
+
+        <!-- Tier 3 — Platform Work -->
+        <div class="tier-card tier-card--blue reveal">
+          <span class="tier-number">Tier 3</span>
+          <h3 class="tier-name">Platform Work</h3>
+          <p class="tier-desc">Working within an existing institutional platform the client is already on.</p>
+
+          <div class="tier-options">
+            <div class="tier-option">
+              <span class="tier-option-dot"></span>
+              <span><strong>ChabadOne</strong> — Inner pages give full source HTML access. ShliachFlow can build fully custom-designed pages for events, campaigns, or programs. These pages can look completely modern and custom despite the platform's age.</span>
+            </div>
+            <div class="tier-option">
+              <span class="tier-option-dot"></span>
+              <span><strong>ChabadSuite</strong> — HTML embed blocks available. ShliachFlow can inject custom-designed sections into pages. Good for one-time campaigns or sections that won't need ongoing changes.</span>
+            </div>
+          </div>
+
+          <div class="tier-best-for">
+            <span class="tier-best-for-label">Best for</span>
+            <p>Shluchim already on ChabadOne or ChabadSuite who want a professional campaign page, event landing page, or program site without switching platforms.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       5. HOW I WORK
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="how-i-work" aria-labelledby="hiw-title">
+    <div class="container">
+      <span class="section-label reveal">Why This Is Different</span>
+      <h2 id="hiw-title" class="reveal">What you're actually getting</h2>
+
+      <div class="hiw-items">
+
+        <div class="hiw-item reveal">
+          <div class="hiw-rule" aria-hidden="true"></div>
+          <div class="hiw-text">
+            <h3>Professional output requires professional skill</h3>
+            <p>Everybody has access to AI now. Shluchim use it, donors use it, and plenty of people have tried building a website or designing a flyer with it. The results usually look like it. Getting professional output from these tools is a skill — knowing which tool to use, how to direct it, and when to step in. That's the expertise. That's what you're hiring.</p>
+          </div>
+        </div>
+
+        <div class="hiw-item reveal">
+          <div class="hiw-rule" aria-hidden="true"></div>
+          <div class="hiw-text">
+            <h3>The expertise came first. AI made it better.</h3>
+            <p>I was building websites and setting up systems for Chabad Houses long before AI tools existed. When they started getting serious, I learned how to use them properly. AI is part of my workflow — not a replacement for the thinking, judgment, and context I bring to every project.</p>
+          </div>
+        </div>
+
+        <div class="hiw-item reveal">
+          <div class="hiw-rule" aria-hidden="true"></div>
+          <div class="hiw-text">
+            <h3>You don't have to explain the context.</h3>
+            <p>When you need a Tishrei campaign page, a donor portal, or a Shabbos schedule — I already know what that means. No briefing required.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       5. PORTFOLIO STRIP
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="portfolio-strip" aria-labelledby="portfolio-title">
+    <div class="container">
+      <span class="section-label reveal">Work</span>
+      <h2 id="portfolio-title" class="reveal">Some of My Work</h2>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card reveal stagger-child">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/camp-troy.jpg" alt="Kosher Culinary Camp Troy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+          </div>
+          <div class="portfolio-info">
+            <span class="platform-badge platform-badge--code" style="margin-bottom:8px;display:inline-block;">Custom Code</span>
+            <h3>Kosher Culinary Camp — Troy, MI</h3>
+            <p>Bold split layout, marquee ticker, real camp photography.</p>
+            <a href="https://camp.jewishtroy.com/" target="_blank" rel="noopener">Visit Site →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal stagger-child">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/gala-fredericksburg.png" alt="Shining Lights Gala Fredericksburg" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+          </div>
+          <div class="portfolio-info">
+            <span class="platform-badge platform-badge--code" style="margin-bottom:8px;display:inline-block;">Custom Code</span>
+            <h3>Shining Lights Gala — Fredericksburg</h3>
+            <p>Dark luxury palette, gold type, designed to build donor trust.</p>
+            <a href="https://dinner.jewishfredericksburg.org/" target="_blank" rel="noopener">Visit Site →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal stagger-child">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/chabadone-pedro-move.png" alt="Chabad S. Pedro Move page" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+          </div>
+          <div class="portfolio-info">
+            <span class="platform-badge platform-badge--chabadone" style="margin-bottom:8px;display:inline-block;">ChabadOne</span>
+            <h3>Move to San Pedro — Chabad S. Pedro</h3>
+            <p>A fully custom inner page inside ChabadOne — looks nothing like the platform.</p>
+            <a href="https://jewishpedro.org/move" target="_blank" rel="noopener">Visit Site →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portfolio-strip-cta reveal">
+        <a href="portfolio.html">See All Work →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       6. TESTIMONIALS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="testimonials" aria-labelledby="testimonials-title">
+    <div class="container">
+      <span class="section-label reveal">What Shluchim Say</span>
+      <h2 id="testimonials-title" class="reveal">In their words</h2>
+
+      <div class="testimonials-stack">
+
+        <div class="testimonial-pull reveal">
+          <blockquote>ShliachFlow has been instrumental in creating a complete platform for our institution, from website design, to invoices, receipts and an organized system to process donations. The constant maintenance and upkeep that ShliachFlow offers keeps our operations seamless and efficient. Thank you very much!</blockquote>
+          <cite>Menachem S.</cite>
+        </div>
+
+        <div class="testimonial-pull reveal">
+          <blockquote>Yisroel helped us set up multiple social media ads which were instrumental in growing our reach ahead of bigger events. He understands how it works and knows how to set up things in an optimal way. Highly recommended.</blockquote>
+          <cite>Dovid H.</cite>
+        </div>
+
+        <div class="testimonial-pull reveal">
+          <blockquote>Thank you Yisroel for the helpful advice and guidance on several platforms and grants for non-profit that are applicable to Shluchim.</blockquote>
+          <cite>Sholom</cite>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FROM THE FIELD — Substack placeholder
+       TODO: Replace with Substack RSS URL when available
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="from-the-field" aria-labelledby="field-title">
+    <div class="container">
+      <span class="section-label reveal">From the Field</span>
+      <h2 id="field-title" class="reveal">Notes on the Digital Side</h2>
+
+      <!-- TODO: Replace with Substack RSS URL — fetch 3 most recent posts and render as .substack-card items -->
+      <div class="substack-coming reveal" style="max-width:52ch;">
+        <p style="font-family:var(--font-body);font-size:var(--text-lg);color:var(--color-text-muted);line-height:1.65;font-style:italic;">Posts coming soon. I'll be writing about platforms, AI tools for shluchim, and behind-the-scenes project notes.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       PRICING
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="pricing" aria-labelledby="pricing-title">
+    <div class="container">
+      <span class="section-label reveal">Pricing</span>
+      <h2 id="pricing-title" class="reveal">How Pricing Works</h2>
+
+      <div class="pricing-copy reveal">
+        <p>Every project is different, so every project gets its own quote.</p>
+        <p>I don't charge hourly. Before any work begins, I scope the project and give you a flat price — so you know exactly what you're getting and what it costs. No surprises.</p>
+        <h3>Thinking about ongoing support?</h3>
+        <p>I'm exploring monthly packages for clients who need regular help. Message me and tell me what you have in mind.</p>
+        <div class="pricing-cta">
+          <a href="https://wa.me/13109355236" class="btn btn-primary" target="_blank" rel="noopener">
+            WhatsApp: (310) 935-5236
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       8. ABOUT
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-inner">
+
+        <!-- TODO: Save headshot.jpg to assets/ directory
+             (headshot provided — professional photo in gray jacket) -->
+        <div class="about-photo">
+          <img src="assets/headshot.jpg"
+               alt="Yisroel Chaim Shuchat, Chabad shliach in San Pedro, CA"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <p class="about-photo-label" style="display:none;">Photo coming soon</p>
+        </div>
+
+        <div class="about-text reveal">
+          <span class="section-label">About</span>
+          <h2 id="about-title">Yisroel Chaim Shuchat</h2>
+          <p>I'm a Chabad shliach in S. Pedro, CA.</p>
+          <p>I've been figuring out tech for my own Chabad House since I got here — websites, donor systems, email, the whole backend. A lot of it I had to work out on my own. When AI tools started getting serious, I learned how to use them properly, and it changed what I'm able to deliver.</p>
+          <p>At some point I started helping other shluchim — first in WhatsApp groups, then with bigger projects. The need was obvious: someone who already understood the world and could handle the digital side without needing a briefing.</p>
+          <p>That's ShliachFlow.</p>
+          <p>Available in English, Hebrew, and Spanish.</p>
+          <a href="https://www.linkedin.com/in/ycshuchat/" class="btn btn-ghost-dark about-btn" target="_blank" rel="noopener">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       9. CONTACT
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <span class="section-label reveal">Contact</span>
+      <h2 id="contact-title" class="reveal">Let's Talk</h2>
+
+      <div class="contact-simple reveal">
+        <p class="contact-lede">Send a message, leave a voice note, or drop an email — whatever's easier for you.</p>
+        <div class="contact-actions">
+          <a href="https://wa.me/13109355236" class="btn btn-primary contact-wa" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp: (310) 935-5236
+          </a>
+          <a href="mailto:info@shliachflow.com" class="btn btn-ghost">
+            info@shliachflow.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       10. FAQ
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="faq-inner">
+        <span class="section-label reveal">FAQ</span>
+        <h2 id="faq-title" class="reveal">Common Questions</h2>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What is ShliachFlow?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>A digital services business for Chabad shluchim and Jewish nonprofits. Websites, systems, content, design, and tech support — by someone who already understands the world you're operating in.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What kind of projects do you handle?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>Websites, systems setup and consulting, writing and content, design, tech troubleshooting, and more. If it's digital and your Chabad House needs it, reach out.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Who is this really for?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>Shluchim and Jewish nonprofit leaders who want professional work done right — without managing it themselves or explaining the context from scratch. If you need someone doing hundreds of small repetitive tasks at the lowest possible rate, a traditional VA may be a better fit. If you want quality work from someone who already gets your world, that's what I do.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">I don't know what I need. Can you still help?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Tell me the problem you're trying to solve and I'll figure out the rest. You don't need to know the technical details — that's my job.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How does pricing work?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>Every project gets a flat quote upfront. I scope the work, give you a number, and that's what you pay. No hourly billing, no surprises.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Do you offer ongoing support packages?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>I'm exploring monthly support options for clients who need regular help. It's not a formal offering yet — if you're interested, message me on WhatsApp and I'll be in touch.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Do you offer revisions?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Reasonable revisions are part of the process. I'd rather get it right than hand you something that doesn't work.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Who owns the work once it's done?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>You do. Once the project is complete and paid for, everything is yours.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I share files or templates with others?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>The files are yours to use. Please don't share editable source files or templates with others as a substitute for hiring someone — if they need similar work done, send them my way.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How do we communicate during a project?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>WhatsApp, voice notes, email — whatever works for you. My approach is to start with a thorough conversation upfront: I want to fully understand the project and start with a clear picture before anything begins. The clearer you are at the start, and the more responsive you are during the process, the faster and better things go.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What's your typical turnaround time?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>It depends on scope. Smaller projects can move quickly; larger ones take more time. I'll always give you a realistic timeline when we scope the project — I don't make promises I can't keep.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can you help with something I already have?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Happy to improve, update, or fix something existing — no need to start from scratch.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Do you work with people outside of Chabad?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. I work primarily with Chabad shluchim but I'm happy to work with any Jewish nonprofit or organization with similar needs.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can you help with CRM?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>CRM implementation isn't my primary focus, but I can help with research, platform selection, and basic setup. For ongoing data work or more intensive CRM projects, I may be able to bring in someone I trust to handle it.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What if my needs change during a project?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>That happens. We'll talk through what changed, adjust the scope if needed, and handle it fairly.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What platforms and systems do you work with?<span class="faq-toggle" aria-hidden="true">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>ChabadOne, ChabadSuite, Squarespace, GitHub-hosted sites, Google Workspace, donation platforms, email marketing tools, and more. I'm comfortable learning new platforms too. I work with whatever makes the most sense for your organization.</p></div></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       11. FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo-wordmark" aria-label="ShliachFlow home">
+          <svg class="logo-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path class="logo-path-blue" d="M8 7C8 7 6 9 6 12C6 15.5 9 17 12 17C15 17 18 18.5 18 21.5C18 24 16 26 14 26" stroke-width="2.4" stroke-linecap="round"/>
+            <path class="logo-path-main" d="M20 21C20 21 22 19 22 16C22 12.5 19 11 16 11C13 11 10 9.5 10 6.5C10 4 12 2 14 2" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-shliach">Shliach</span><span class="logo-flow">Flow</span>
+        </a>
+        <p class="footer-tagline">Built by a fellow shliach.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><a href="mailto:info@shliachflow.com">info@shliachflow.com</a></div>
+        <div class="footer-contact-item"><a href="https://wa.me/13109355236" target="_blank" rel="noopener">WhatsApp: (310) 935-5236</a></div>
+        <div class="footer-contact-item" style="font-size:13px;opacity:0.55;">817 W 9th St, San Pedro, CA</div>
+        <a href="https://www.linkedin.com/in/ycshuchat/" class="footer-linkedin" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ShliachFlow. All rights reserved. &nbsp;·&nbsp; 817 W 9th St, San Pedro, CA</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/13109355236"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

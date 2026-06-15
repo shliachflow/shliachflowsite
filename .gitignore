@@ -1,0 +1,10 @@
+# Dev tools
+take_screenshots.py
+*.pyc
+
+# Claude Code session files
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
