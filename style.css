@@ -1017,7 +1017,7 @@ h3 {
   margin-bottom: 10px;
 }
 .platform-badge--code       { background: rgba(224,120,32,0.1); color: var(--color-accent); }
-.platform-badge--chabadone  { background: rgba(61,154,232,0.1); color: var(--color-accent-blue); }
+.platform-badge--chabadone  { background: var(--color-dark); color: #FFFFFF; }
 .platform-badge--squarespace { background: rgba(17,24,39,0.07); color: var(--color-text-muted); }
 
 /* Featured portfolio card — full-width horizontal */
@@ -1027,7 +1027,7 @@ h3 {
   gap: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: #FFFFFF;
+  background: var(--color-bg);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-md);
   margin-bottom: 22px;
@@ -1086,7 +1086,7 @@ h3 {
 .portfolio-full-grid .portfolio-info               { padding: 20px 22px; }
 .portfolio-full-grid .portfolio-info h3            { color: var(--color-text); font-size: 16px; margin-bottom: 6px; }
 .portfolio-full-grid .portfolio-info p             { color: var(--color-text-muted); font-family: var(--font-body); font-size: 0.9375rem; line-height: 1.55; margin-bottom: 14px; }
-.portfolio-full-grid .portfolio-info a             { color: var(--color-accent-blue); font-family: var(--font-ui); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; transition: gap 0.15s ease; }
+.portfolio-full-grid .portfolio-info a             { color: var(--color-accent); font-family: var(--font-ui); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; transition: gap 0.15s ease; }
 .portfolio-full-grid .portfolio-info a:hover       { gap: 8px; }
 .portfolio-full-grid .portfolio-info .no-link      { font-family: var(--font-ui); font-size: 13px; color: var(--color-text-muted); opacity: 0.5; font-style: italic; }
 
@@ -1121,7 +1121,7 @@ h3 {
 }
 
 .tier-card {
-  background: #FFFFFF;
+  background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: clamp(1.5rem, 3vw, 2rem);
@@ -1139,7 +1139,6 @@ h3 {
   text-transform: uppercase;
   color: var(--color-accent);
 }
-.tier-card--blue .tier-number  { color: var(--color-accent-blue); }
 .tier-card--muted .tier-number { color: var(--color-text-muted); }
 
 .tier-name {
@@ -1183,7 +1182,6 @@ h3 {
   flex-shrink: 0;
   margin-top: 7px;
 }
-.tier-card--blue  .tier-option-dot { background: var(--color-accent-blue); }
 .tier-card--muted .tier-option-dot { background: var(--color-text-muted); }
 
 .tier-best-for {
@@ -1373,3 +1371,21 @@ h3 {
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger       { display: flex; }
 }
+
+/* ── Shared additions ── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.portfolio-info a.card-link {
+  font-family: var(--font-ui); font-size: 14px; font-weight: 600;
+  color: var(--color-accent); display: inline-flex; align-items: center;
+  gap: 5px; margin-top: 8px; transition: gap 0.15s ease;
+}
+.portfolio-info a.card-link:hover { gap: 9px; }
+.services-more { margin-top: clamp(2.5rem, 6vw, 4rem); }
+.services-more a {
+  font-family: var(--font-ui); font-size: 0.9375rem; font-weight: 600;
+  color: var(--color-accent-blue);
+}
+.services-more a:hover { text-decoration: underline; }

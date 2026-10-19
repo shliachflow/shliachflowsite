@@ -8,7 +8,7 @@
 
   /* ── Nav scroll behavior ────────────────────────────────── */
   const nav = document.getElementById('nav');
-  const hero = document.getElementById('hero');
+  const hero = document.getElementById('hero') || document.querySelector('.portfolio-page-hero');
 
   function updateNav() {
     if (!nav || !hero) return;
