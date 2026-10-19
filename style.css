@@ -171,7 +171,7 @@ h3 {
   background: var(--color-bg-subtle);
 }
 
-#portfolio-strip, #contact {
+#portfolio-strip, #contact, #services-cta {
   background: var(--color-dark);
 }
 
@@ -181,7 +181,7 @@ h3 {
 
 /* Section padding */
 #intro, #services, #service-tiers, #how-i-work, #portfolio-strip,
-#testimonials, #pricing, #from-the-field, #about, #contact, #faq {
+#testimonials, #pricing, #from-the-field, #about, #contact, #faq, #services-cta {
   padding-block: var(--section-padding-sm);
 }
 
@@ -538,10 +538,11 @@ h3 {
   margin-bottom: clamp(3rem, 7vw, 5rem);
   border-left: 3px solid var(--color-accent);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
 }
+.service-featured p { max-width: 62ch; }
 
 .service-featured .service-icon {
   width: 56px;
