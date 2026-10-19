@@ -114,7 +114,7 @@
   const selectors = [
     'section > .container > h2',
     '.service-featured', '.service-item',
-    '.testimonial-pull', '.faq-item',
+    '.testimonial-pull',
     '.about-text', '.pricing-copy', '.portfolio-card',
     '.hiw-item', '.intro-inner'
   ];
