@@ -1451,3 +1451,14 @@ p, blockquote, li { text-wrap: pretty; }
 .footer-col ul a, .footer-contact-item a { display: inline-block; padding-block: 0.6rem; }
 @media (max-width: 600px) { .whatsapp-float { width: 52px; height: 52px; bottom: 18px; right: 16px; } }
 .faq-list { padding-top: 0; }
+
+/* Testimonials: lead quote larger, the rest smaller and tighter */
+.testimonials-stack { gap: var(--sp-4); }
+.testimonial-pull { padding-left: var(--sp-3); }
+.testimonial-pull blockquote { font-size: 1rem; line-height: 1.6; }
+.testimonial-pull:first-child blockquote { font-size: clamp(1.125rem, 1vw + 0.9rem, 1.4rem); line-height: 1.55; }
+.testimonial-pull:first-child { border-left-width: 4px; padding-bottom: var(--sp-2); }
+@media (min-width: 900px) {
+  .testimonials-stack { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-8) clamp(2rem, 4vw, 3.5rem); align-items: stretch; }
+  .testimonial-pull:first-child { grid-column: 1 / -1; max-width: 62rem; }
+}
