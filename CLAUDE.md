@@ -30,5 +30,5 @@ Home, Services, Portfolio and FAQ are built. Positioning was reset in Oct 2026 t
 ## Contact info (do not invent or modify)
 - WhatsApp: https://wa.me/13109355236
 - Email: info@shliachflow.com
-- Address (mailing): 1536 W 25th St #614, San Pedro, CA 90731
+- Address (mailing): 1536 W 25th St #614, San Pedro, CA 90732
 - LinkedIn: https://www.linkedin.com/in/ycshuchat/

@@ -31,7 +31,7 @@ A shliach lands, understands within seconds that this is the website and AI pers
 
 ## Open decisions
 - Hero headline size: CSS is `clamp(3.5rem, 6vw, 5.6rem)` in the split hero, the override doc says `clamp(4.5rem, 11vw + 0.5rem, 10rem)`. Decided by layout; override doc is superseded here.
-- Postal address is the mailing address 1536 W 25th St #614, San Pedro, CA 90731 (contact info and structured data); prose uses "S. Pedro".
+- Postal address is the mailing address 1536 W 25th St #614, San Pedro, CA 90732 (contact info and structured data); prose uses "S. Pedro".
 - Pre-filled WhatsApp message (changes the contact URL, needs approval).
 
 ## Decided
