@@ -238,7 +238,7 @@ h3 {
 
 .btn-primary {
   background: var(--color-accent);
-  color: #FFFFFF;
+  color: var(--color-dark);
 }
 .btn-primary:hover {
   background: var(--color-accent-hover);
@@ -1422,3 +1422,9 @@ p, blockquote, li { text-wrap: pretty; }
 
 /* FAQ page closing call-to-action: dark band like the other pages */
 #faq-cta { background: var(--color-dark); padding-block: var(--section-padding-sm); }
+
+/* Contrast: dark text on amber; small amber links on light surfaces read as dark text with an amber arrow */
+.btn-primary:hover { color: var(--color-dark); }
+.portfolio-info a, .portfolio-info a.card-link, .portfolio-full-grid .portfolio-info a {
+  color: var(--color-text); text-decoration: underline; text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; text-underline-offset: 4px;
+}
