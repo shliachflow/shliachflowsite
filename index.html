@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShliachFlow — Websites &amp; AI for Chabad Shluchim</title>
-  <meta name="description" content="Websites, AI consulting, and the DAAS CRM for Chabad shluchim and Jewish nonprofits. Built by a fellow shliach in S. Pedro, CA.">
-  <meta property="og:title" content="ShliachFlow — Websites &amp; AI for Chabad Shluchim">
-  <meta property="og:description" content="You didn't sign up to be the web guy. I handle the websites, AI, and CRM side — and you don't have to explain what a Chabad House is.">
+  <title>ShliachFlow — Websites &amp; AI Consulting for Chabad Shluchim</title>
+  <meta name="description" content="Websites, AI consulting, and the DAAS CRM for Chabad shluchim and Jewish nonprofits. Custom Chabad House websites, camp sites and AI tools, built by a fellow shliach in S. Pedro, CA.">
+  <meta property="og:title" content="ShliachFlow — Websites &amp; AI Consulting for Chabad Shluchim">
+  <meta property="og:description" content="Websites, AI consulting, and the DAAS CRM for Chabad shluchim and Jewish nonprofits. Custom Chabad House websites, camp sites and AI tools, built by a fellow shliach in S. Pedro, CA.">
   <meta property="og:url" content="https://shliachflow.com">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ShliachFlow">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="ShliachFlow websites for Chabad Houses shown on desktop and phone">
   <meta property="og:image" content="https://shliachflow.com/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ShliachFlow — Websites &amp; AI Consulting for Chabad Shluchim">
+  <meta name="twitter:description" content="Websites, AI consulting, and the DAAS CRM for Chabad shluchim and Jewish nonprofits. Custom Chabad House websites, camp sites and AI tools, built by a fellow shliach in S. Pedro, CA.">
+  <meta name="twitter:image" content="https://shliachflow.com/assets/og-image.jpg">
+  <meta name="author" content="Rabbi Yisroel Chaim Shuchat">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#111827">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary">
   <link rel="canonical" href="https://shliachflow.com/">
 
   <script type="application/ld+json">
@@ -20,11 +30,16 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": [
+          "ProfessionalService",
+          "Organization"
+        ],
+        "@id": "https://shliachflow.com/#org",
         "name": "ShliachFlow",
-        "url": "https://shliachflow.com",
+        "url": "https://shliachflow.com/",
         "logo": "https://shliachflow.com/assets/logo-dark.png",
-        "description": "Websites, AI consulting, and the DAAS CRM for Chabad shluchim and Jewish nonprofits.",
+        "image": "https://shliachflow.com/assets/og-image.jpg",
+        "description": "ShliachFlow builds websites, provides AI and technology consulting, and offers the DAAS CRM for Chabad shluchim and Jewish nonprofits.",
         "email": "info@shliachflow.com",
         "telephone": "+13109355236",
         "address": {
@@ -35,9 +50,106 @@
           "postalCode": "90731",
           "addressCountry": "US"
         },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Chabad shluchim, Chabad Houses and Jewish nonprofits"
+        },
+        "knowsAbout": [
+          "Chabad House websites",
+          "Website design and development",
+          "AI consulting for nonprofits",
+          "CRM for Chabad Houses",
+          "ChabadOne",
+          "ChabadSuite",
+          "Squarespace"
+        ],
+        "founder": {
+          "@id": "https://shliachflow.com/#founder"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/ycshuchat/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+13109355236",
+          "email": "info@shliachflow.com",
+          "availableLanguage": "English"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "ShliachFlow services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Websites for Chabad Houses",
+                "description": "New sites, refreshes, mini sites and camp sites. Custom-coded, or built on Squarespace, ChabadOne or ChabadSuite.",
+                "url": "https://shliachflow.com/services.html#svc-websites"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI and technology consulting",
+                "description": "Finding where AI and the right tools can save time in a Chabad House, then getting them set up.",
+                "url": "https://shliachflow.com/services.html#svc-ai"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "DAAS CRM",
+                "description": "A CRM built for Chabad Houses by a fellow shliach, offered and supported by ShliachFlow in partnership with its developer.",
+                "url": "https://daascrm.app"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://shliachflow.com/#founder",
+        "name": "Rabbi Yisroel Chaim Shuchat",
+        "jobTitle": "Founder",
+        "description": "A Chabad shliach in San Pedro, California who builds websites and offers AI consulting to other shluchim.",
+        "worksFor": {
+          "@id": "https://shliachflow.com/#org"
+        },
         "sameAs": [
           "https://www.linkedin.com/in/ycshuchat/"
         ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://shliachflow.com/#website",
+        "url": "https://shliachflow.com/",
+        "name": "ShliachFlow",
+        "publisher": {
+          "@id": "https://shliachflow.com/#org"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://shliachflow.com/#webpage",
+        "url": "https://shliachflow.com/",
+        "name": "ShliachFlow — Websites & AI Consulting for Chabad Shluchim",
+        "description": "Websites, AI consulting, and the DAAS CRM for Chabad shluchim and Jewish nonprofits. Custom Chabad House websites, camp sites and AI tools, built by a fellow shliach in S. Pedro, CA.",
+        "isPartOf": {
+          "@id": "https://shliachflow.com/#website"
+        },
+        "about": {
+          "@id": "https://shliachflow.com/#org"
+        },
+        "inLanguage": "en"
       }
     ]
   }
