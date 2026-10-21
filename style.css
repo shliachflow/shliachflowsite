@@ -1458,11 +1458,11 @@ h3 {
 .hero-frame--camp img, .hero-frame--gala img { aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
 .hero-frame-bar { display: flex; gap: 6px; padding: 9px 12px; background: #1B2333; }
 .hero-frame-bar i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25); }
-.hero-frame--camp { top: 0;    right: 0; width: 62%; }
-.hero-frame--gala { top: 17%;  left: 0;  width: 60%; }
-.hero-frame--ai   { bottom: 0; right: 0; width: 72%; }
+.hero-frame--camp { top: 0;    left: 0;   width: 64%; }
+.hero-frame--gala { top: 24%;  right: 0;  width: 60%; }
+.hero-frame--ai   { bottom: 0; left: 6%;  width: 74%; }
 .hero-tag {
-  position: absolute; z-index: 5; bottom: 4%; left: 4%;
+  position: absolute; z-index: 5; bottom: 5%; right: 3%;
   font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
   padding: 0.45rem 0.7rem; border-radius: var(--radius-full);
   background: var(--color-accent); color: #FFFFFF; box-shadow: 0 6px 18px rgba(0,0,0,0.35);
@@ -1472,9 +1472,9 @@ h3 {
 @media (max-width: 900px) {
   .hero-content.hero-split { grid-template-columns: 1fr; }
   .hero-stack { height: clamp(320px, 62vw, 470px); }
-  .hero-frame--camp { width: 56%; }
-  .hero-frame--gala { top: 14%; width: 54%; }
-  .hero-frame--ai   { width: 64%; }
+  .hero-frame--camp { width: 58%; }
+  .hero-frame--gala { top: 22%; width: 54%; }
+  .hero-frame--ai   { width: 66%; }
 }
 @media (max-width: 700px) {
   .hero-offers { grid-template-columns: 1fr; gap: 0.9rem; }
