@@ -1462,3 +1462,21 @@ p, blockquote, li { text-wrap: pretty; }
   .testimonials-stack { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-8) clamp(2rem, 4vw, 3.5rem); align-items: stretch; }
   .testimonial-pull:first-child { grid-column: 1 / -1; max-width: 62rem; }
 }
+
+/* SEO landing pages */
+.seo-crumbs { font-family: var(--font-ui); font-size: 0.8125rem; margin-bottom: 0.75rem; color: rgba(255,255,255,0.7); }
+.seo-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+.seo-section { padding-block: var(--section-padding-sm); background: var(--color-bg); }
+.seo-section.alt { background: var(--color-bg-subtle); }
+.seo-prose { max-width: 46rem; }
+.seo-prose h2 { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.03em; font-size: var(--text-section-title); line-height: 1.1; margin-bottom: 1.25rem; text-wrap: balance; color: var(--color-text); }
+.seo-prose h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; margin: 1.75rem 0 0.5rem; color: var(--color-text); }
+.seo-prose p { font-family: var(--font-body); line-height: 1.7; margin-bottom: 0.75rem; color: var(--color-text); text-wrap: pretty; }
+.seo-prose a { color: var(--color-text); text-decoration: underline; text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; text-underline-offset: 4px; font-weight: 600; }
+.seo-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.seo-list span { color: var(--color-text-muted); font-family: var(--font-ui); font-size: 0.875rem; }
+.seo-quote { font-family: var(--font-body); font-style: italic; font-size: var(--text-lg); line-height: 1.6; border-left: 4px solid var(--color-accent); padding-left: 1.25rem; margin: 0 0 0.75rem; }
+.seo-cite { font-family: var(--font-ui); font-size: 0.8125rem; color: var(--color-text-muted); font-weight: 600; }
+.portfolio-page-hero .seo-crumbs { font-family: var(--font-ui); font-size: 0.8125rem; line-height: 1.4; margin: 0 0 0.75rem; color: rgba(255,255,255,0.75); }
+.seo-prose h2 { font-size: clamp(1.625rem, 2.2vw + 1rem, 2.5rem); }
+.seo-section { padding-block: clamp(2.5rem, 5vw, 4rem); }

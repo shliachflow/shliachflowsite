@@ -14,6 +14,9 @@ Contact: WhatsApp (310) 935-5236 (https://wa.me/13109355236), info@shliachflow.c
 ## Pages
 - [Home](https://shliachflow.com/): overview and featured work
 - [Services](https://shliachflow.com/services.html): everything offered and how websites get built
+- [Website design for Chabad Houses](https://shliachflow.com/website-design-for-chabad-houses.html): custom, Squarespace, ChabadOne and ChabadSuite sites
+- [AI consulting for shluchim](https://shliachflow.com/ai-consulting-for-shluchim.html): where AI and the right tools save time
+- [CRM for Chabad Houses (DAAS)](https://shliachflow.com/crm-for-chabad-houses.html): offered and supported by ShliachFlow
 - [Portfolio](https://shliachflow.com/portfolio.html): real sites built for Chabad Houses
 - [FAQ](https://shliachflow.com/faq.html): common questions about working with ShliachFlow
 
