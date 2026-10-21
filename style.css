@@ -281,24 +281,18 @@ h3 {
   gap: var(--sp-3);
 }
 
-.logo-img-dark {
-  display: block;
+.logo-img-light, .logo-img-dark {
   height: 30px;
   width: auto;
-  transition: filter 0.25s ease;
 }
+.logo-img-dark { display: none; }
 
-/* On hero (transparent nav): invert PNG to white */
-#nav:not(.nav--scrolled) .logo-img-dark {
-  height: 42px;
-  filter: brightness(0) invert(1);
-}
+/* Over the hero (transparent nav): reversed logo, blue kept */
+#nav:not(.nav--scrolled) .logo-img-light { display: block; height: 42px; }
 
-/* On scrolled (light nav): show PNG as-is (dark) */
-#nav.nav--scrolled .logo-img-dark {
-  height: 34px;
-  filter: none;
-}
+/* Scrolled (light nav): original logo */
+#nav.nav--scrolled .logo-img-light { display: none; }
+#nav.nav--scrolled .logo-img-dark { display: block; height: 34px; }
 
 /* Subtle dark gradient behind nav on hero so logo is always readable */
 #nav:not(.nav--scrolled) {
@@ -832,7 +826,6 @@ h3 {
   display: block;
   height: 30px;
   width: auto;
-  filter: brightness(0) invert(1);
   margin-bottom: 10px;
 }
 .footer-tagline { font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.38); font-style: italic; }
