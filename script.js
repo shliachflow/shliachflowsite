@@ -142,10 +142,10 @@
   });
 })();
 
-/* ── Work strip arrows ─────────────────────────────────────── */
+/* ── Work strip: arrows, keyboard, mouse drag ─────────────── */
 (function () {
   const track = document.querySelector('.portfolio-grid');
-  const arrows = document.querySelectorAll('.work-arrow');
+  const arrows = Array.from(document.querySelectorAll('.work-arrow'));
   if (!track || !arrows.length) return;
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -154,31 +154,39 @@
     const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
     return card ? card.getBoundingClientRect().width + gap : 300;
   }
-  function update() {
+  function isOff(a) {
     const max = track.scrollWidth - track.clientWidth - 2;
+    return Number(a.dataset.dir) < 0 ? track.scrollLeft <= 2 : track.scrollLeft >= max;
+  }
+  function update() {
     arrows.forEach(function (a) {
-      const dir = Number(a.dataset.dir);
-      a.disabled = dir < 0 ? track.scrollLeft <= 2 : track.scrollLeft >= max;
+      const off = isOff(a);
+      a.classList.toggle('is-off', off);
+      a.setAttribute('aria-disabled', off ? 'true' : 'false');
+      a.tabIndex = off ? -1 : 0;
+      if (off && document.activeElement === a) {
+        const other = arrows.find(function (b) { return b !== a && !isOff(b); });
+        (other || track).focus({ preventScroll: true });
+      }
     });
   }
   arrows.forEach(function (a) {
     a.addEventListener('click', function () {
+      if (isOff(a)) return;
       track.scrollBy({ left: Number(a.dataset.dir) * step(), behavior: reduce ? 'auto' : 'smooth' });
     });
   });
   track.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', update);
   update();
-})();
 
-/* Work strip: click-and-drag with a mouse (touch keeps native swiping) */
-(function () {
-  const track = document.querySelector('.portfolio-grid');
-  if (!track) return;
+  /* Mouse drag (touch keeps native swiping). A drag never counts as a click. */
   let drag = null;
+  let lastDragEnd = 0;
   track.addEventListener('mousedown', function (e) {
     if (e.button !== 0) return;
     drag = { x: e.clientX, left: track.scrollLeft, moved: false };
+    track.classList.add('is-pressing');
   });
   window.addEventListener('mousemove', function (e) {
     if (!drag) return;
@@ -188,14 +196,22 @@
   });
   window.addEventListener('mouseup', function () {
     if (!drag) return;
-    const moved = drag.moved;
+    if (drag.moved) lastDragEnd = performance.now();
     drag = null;
-    track.classList.remove('is-dragging');
-    if (moved) track.dataset.justDragged = '1';
-    setTimeout(function () { delete track.dataset.justDragged; }, 0);
+    track.classList.remove('is-dragging', 'is-pressing');
   });
   track.addEventListener('click', function (e) {
-    if (track.dataset.justDragged) { e.preventDefault(); e.stopPropagation(); }
+    if (performance.now() - lastDragEnd < 350) { e.preventDefault(); e.stopPropagation(); }
   }, true);
   track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+})();
+
+/* ── Floating WhatsApp: hide while the hero is on screen ──── */
+(function () {
+  const hero = document.getElementById('hero');
+  const wa = document.querySelector('.whatsapp-float');
+  if (!hero || !wa || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (entries) {
+    wa.classList.toggle('is-hidden', entries[0].isIntersecting);
+  }, { threshold: 0.35 }).observe(hero);
 })();
