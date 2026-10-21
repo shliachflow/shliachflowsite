@@ -830,7 +830,7 @@ h3 {
 }
 .footer-tagline { font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.7); font-style: italic; }
 
-.footer-col h4 {
+.footer-col h3, .footer-col h4 {
   font-family: var(--font-ui);
   font-size: 11px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
@@ -1433,10 +1433,21 @@ p, blockquote, li { text-wrap: pretty; }
 .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 200; background: var(--color-accent); color: var(--color-dark); font-family: var(--font-ui); font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px; }
 .skip-link:focus { top: 1rem; }
 .faq-q-heading { margin: 0; font-size: inherit; line-height: inherit; font-family: inherit; }
-.footer-col h4 { color: rgba(255,255,255,0.7); }
+
 #portfolio-strip .portfolio-info a { color: #FFFFFF; }
 .nav-mobile .btn-primary { color: var(--color-dark); }
 .footer-col a, .footer-links a { display: inline-block; padding-block: 0.4rem; min-width: 44px; }
 #faq-cta { padding-block: clamp(3rem, 6vw, 4.5rem); border-bottom: 1px solid rgba(255,255,255,0.12); }
 /* Small amber text on light surfaces: use the deeper amber */
 #what-i-do .section-label, #pricing .section-label, #about .section-label, .platform-badge--code, .faq-toggle { color: var(--color-accent-hover); }
+
+/* Final fixes */
+.footer-col h3, .footer-col h4 { color: rgba(255,255,255,0.7); }
+.platform-badge--chabadsuite { background: var(--color-dark); color: #FFFFFF; }
+.nf-links { display: flex; gap: 1.5rem; margin-top: clamp(1.5rem, 4vw, 2.5rem); font-family: var(--font-ui); }
+.nf-links a { color: rgba(255,255,255,0.8); text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 4px; padding-block: 0.75rem; }
+.logo, #nav .logo-link, #nav a:has(.logo-img-light) { display: inline-flex; align-items: center; min-height: 44px; }
+.footer-col ul { gap: 2px; }
+.footer-col ul a, .footer-contact-item a { display: inline-block; padding-block: 0.6rem; }
+@media (max-width: 600px) { .whatsapp-float { width: 52px; height: 52px; bottom: 18px; right: 16px; } }
+.faq-list { padding-top: 0; }

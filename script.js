@@ -55,6 +55,13 @@
     });
   }
 
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('is-open')) {
+      closeMobileNav();
+      hamburger && hamburger.focus();
+    }
+  });
+
   // Close on outside tap
   document.addEventListener('click', function (e) {
     if (
@@ -209,12 +216,19 @@
   track.addEventListener('dragstart', function (e) { e.preventDefault(); });
 })();
 
-/* ── Floating WhatsApp: hide while the hero is on screen ──── */
+/* ── Floating WhatsApp: hide while the hero, closing CTA or footer is on screen ──── */
 (function () {
-  const hero = document.getElementById('hero');
   const wa = document.querySelector('.whatsapp-float');
-  if (!hero || !wa || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function (entries) {
-    wa.classList.toggle('is-hidden', entries[0].isIntersecting);
-  }, { threshold: 0.35 }).observe(hero);
+  const zones = ['hero', 'faq-cta', 'services-cta', 'contact', 'footer']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+  if (!wa || !zones.length || !('IntersectionObserver' in window)) return;
+  const visible = new Set();
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      en.isIntersecting ? visible.add(en.target) : visible.delete(en.target);
+    });
+    wa.classList.toggle('is-hidden', visible.size > 0);
+  }, { threshold: 0.2 });
+  zones.forEach(function (z) { io.observe(z); });
 })();
