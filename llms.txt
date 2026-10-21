@@ -1,0 +1,24 @@
+# ShliachFlow
+
+> ShliachFlow is the website and AI partner for Chabad shluchim and Jewish nonprofits. It builds custom websites, provides AI and technology consulting, and offers the DAAS CRM. It is run by Rabbi Yisroel Chaim Shuchat, a Chabad shliach in San Pedro, California.
+
+Contact: WhatsApp (310) 935-5236 (https://wa.me/13109355236), info@shliachflow.com. Address: 817 W 9th St, San Pedro, CA 90731.
+
+## What ShliachFlow does
+- Websites (flagship): new sites, refreshes, mini sites and camp sites for Chabad Houses. Custom-coded, or built on Squarespace, ChabadOne or ChabadSuite.
+- AI and technology consulting: finding where AI and the right tools can save time in a Chabad House, then setting them up.
+- DAAS CRM: a CRM built for Chabad Houses by a fellow shliach, offered and supported by ShliachFlow in partnership with its developer. Details at https://daascrm.app
+- Coming soon: AI agents, and a website platform for shluchim.
+- Also available (small): books and learning materials, AI-assisted and personally reviewed.
+
+## Pages
+- [Home](https://shliachflow.com/): overview and featured work
+- [Services](https://shliachflow.com/services.html): everything offered and how websites get built
+- [Portfolio](https://shliachflow.com/portfolio.html): real sites built for Chabad Houses
+- [FAQ](https://shliachflow.com/faq.html): common questions about working with ShliachFlow
+
+## Selected work
+- Kosher Culinary Camp, Troy, MI: https://camp.jewishtroy.com/
+- Hebrew School of the Arts, Troy, MI: https://hsa.jewishtroy.com/
+- Shining Lights Gala, Fredericksburg: https://dinner.jewishfredericksburg.org/
+- Union County Torah Center-Chabad (ChabadSuite): https://unioncounty.chabadsuite.net/
