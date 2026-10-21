@@ -1503,3 +1503,33 @@ h3 {
   .hero-split .hero-headline { font-size: clamp(3.5rem, 6vw, 5.6rem); }
 }
 @media (max-width: 900px) { .hero-phone { width: min(28%, 200px); } }
+
+/* Services: featured blocks with visuals */
+.service-featured { grid-template-columns: 1fr 1.05fr; align-items: center; }
+.service-featured .feature-link { display: inline-block; margin-top: 1.25rem; }
+.feature-link {
+  font-family: var(--font-ui); font-size: 0.9375rem; font-weight: 600; color: var(--color-accent);
+  transition: letter-spacing 0.15s ease;
+}
+.feature-link:hover { text-decoration: underline; }
+.feature-visual {
+  margin: 0; overflow: hidden; border-radius: var(--radius-lg); background: #FFFFFF;
+  box-shadow: 0 24px 50px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.18);
+}
+.feature-visual img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
+.feature-visual .hero-frame-bar { background: #2B3548; }
+.feature-visual--plain { box-shadow: var(--shadow-md), 0 0 0 1px var(--color-border); }
+.feature-visual--plain img { aspect-ratio: 1200 / 630; }
+.service-feature-light {
+  display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center;
+  margin-bottom: clamp(3rem, 7vw, 5rem); padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+}
+.service-feature-light h3 { font-family: var(--font-display); font-size: var(--text-service-title); font-weight: 800; color: var(--color-text); margin: 0.9rem 0 0.9rem; line-height: 1.2; }
+.service-feature-light p { font-family: var(--font-body); font-size: var(--text-body); line-height: 1.65; color: var(--color-text-muted); }
+.service-feature-light .service-icon { width: 48px; height: 48px; }
+.service-feature-light .feature-link { display: inline-block; margin-top: 1.25rem; color: var(--color-accent-blue); }
+@media (max-width: 768px) {
+  .service-featured { grid-template-columns: 1fr; }
+  .service-feature-light { grid-template-columns: 1fr; }
+}
