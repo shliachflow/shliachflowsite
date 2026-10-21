@@ -1533,3 +1533,8 @@ h3 {
   .service-featured { grid-template-columns: 1fr; }
   .service-feature-light { grid-template-columns: 1fr; }
 }
+
+.feature-link + .feature-link { margin-left: 1.25rem; }
+/* Services page rhythm: subtle → light → subtle → dark */
+#service-tiers { background: var(--color-bg); }
+#how-i-work { background: var(--color-bg-subtle); }
