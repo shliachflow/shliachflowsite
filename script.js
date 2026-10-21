@@ -170,3 +170,32 @@
   window.addEventListener('resize', update);
   update();
 })();
+
+/* Work strip: click-and-drag with a mouse (touch keeps native swiping) */
+(function () {
+  const track = document.querySelector('.portfolio-grid');
+  if (!track) return;
+  let drag = null;
+  track.addEventListener('mousedown', function (e) {
+    if (e.button !== 0) return;
+    drag = { x: e.clientX, left: track.scrollLeft, moved: false };
+  });
+  window.addEventListener('mousemove', function (e) {
+    if (!drag) return;
+    const dx = e.clientX - drag.x;
+    if (!drag.moved && Math.abs(dx) > 5) { drag.moved = true; track.classList.add('is-dragging'); }
+    if (drag.moved) track.scrollLeft = drag.left - dx;
+  });
+  window.addEventListener('mouseup', function () {
+    if (!drag) return;
+    const moved = drag.moved;
+    drag = null;
+    track.classList.remove('is-dragging');
+    if (moved) track.dataset.justDragged = '1';
+    setTimeout(function () { delete track.dataset.justDragged; }, 0);
+  });
+  track.addEventListener('click', function (e) {
+    if (track.dataset.justDragged) { e.preventDefault(); e.stopPropagation(); }
+  }, true);
+  track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+})();

@@ -1539,23 +1539,31 @@ h3 {
 #service-tiers { background: var(--color-bg); }
 #how-i-work { background: var(--color-bg-subtle); }
 
-/* Homepage work strip: one swipeable row of every project */
-.work-controls { display: flex; justify-content: flex-end; gap: 0.5rem; margin: -2.5rem 0 1rem; }
+/* Homepage work strip: one scrollable row, arrows on the sides */
+.work-scroller { position: relative; --work-card-w: clamp(280px, 29vw, 400px); }
 .work-arrow {
-  width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
-  border: 1px solid rgba(255,255,255,0.3); background: transparent; color: #FFFFFF;
+  position: absolute; z-index: 5; width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+  top: calc(var(--work-card-w) * 0.28125 - 22px);
+  border: 1px solid rgba(255,255,255,0.4); background: rgba(17,24,39,0.88); color: #FFFFFF;
   font-family: var(--font-ui); font-size: 1.1rem; line-height: 1;
-  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.2s ease;
 }
-.work-arrow:hover:not(:disabled) { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.7); }
-.work-arrow:disabled { opacity: 0.3; cursor: default; }
+.work-arrow--prev { left: -22px; }
+.work-arrow--next { right: calc(50% - 50vw + 24px); }
+.work-arrow:hover:not(:disabled) { background: var(--color-accent); border-color: var(--color-accent); }
+.work-arrow:disabled { opacity: 0; pointer-events: none; }
 .portfolio-grid {
   display: grid; grid-auto-flow: column; grid-template-columns: none;
-  grid-auto-columns: clamp(280px, 29vw, 400px); gap: clamp(1rem, 2vw, 1.5rem);
+  grid-auto-columns: var(--work-card-w); gap: clamp(1rem, 2vw, 1.5rem);
   overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y; overscroll-behavior-x: contain;
   margin-right: calc(50% - 50vw); padding-right: calc(50vw - 50%); padding-bottom: 1rem;
   scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.25) transparent;
 }
+@media (hover: hover) { .portfolio-grid { cursor: grab; } }
+.portfolio-grid.is-dragging { scroll-snap-type: none; cursor: grabbing; user-select: none; }
+.portfolio-grid img { -webkit-user-drag: none; }
 .portfolio-grid:focus-visible { outline-offset: 6px; }
 .portfolio-grid .portfolio-card { scroll-snap-align: start; }
 .portfolio-grid .portfolio-thumb { height: auto; aspect-ratio: 16 / 9; overflow: hidden; }
@@ -1565,7 +1573,10 @@ h3 {
 .portfolio-strip-cta { margin-top: clamp(1.25rem, 3vw, 2rem); }
 .portfolio-strip-cta .btn { display: inline-flex; }
 @media (max-width: 639px) {
-  .portfolio-grid { grid-auto-columns: 82%; margin-inline: calc(-1 * clamp(1.5rem, 6vw, 5rem)); padding-inline: clamp(1.5rem, 6vw, 5rem); scroll-padding-inline: clamp(1.5rem, 6vw, 5rem); }
-  .work-controls { display: none; }
+  .work-scroller { --work-card-w: 82vw; }
+  .work-arrow { width: 38px; height: 38px; top: calc(var(--work-card-w) * 0.28125 - 19px); font-size: 1rem; }
+  .work-arrow--prev { left: -14px; }
+  .work-arrow--next { right: -14px; }
+  .portfolio-grid { margin-inline: calc(-1 * clamp(1.5rem, 6vw, 5rem)); padding-inline: clamp(1.5rem, 6vw, 5rem); scroll-padding-inline: clamp(1.5rem, 6vw, 5rem); }
 }
 @media (prefers-reduced-motion: reduce) { .portfolio-grid { scroll-behavior: auto; } }
