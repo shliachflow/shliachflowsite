@@ -1412,3 +1412,13 @@ h3 {
 /* Balanced headings, tidy paragraph endings */
 h1, h2, h3 { text-wrap: balance; }
 p, blockquote, li { text-wrap: pretty; }
+
+/* FAQ: two columns, questions lead, answers calmer */
+.faq-inner { max-width: none; }
+.faq-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 clamp(2.5rem, 6vw, 5rem); align-items: start; }
+@media (min-width: 900px) { .faq-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.faq-question { font-size: clamp(1.0625rem, 0.9vw + 0.75rem, 1.25rem); font-weight: 700; line-height: 1.35; padding: 22px 0; }
+.faq-answer-inner p { font-size: 1rem; line-height: 1.7; max-width: none; padding-bottom: 22px; }
+
+/* FAQ page closing call-to-action: dark band like the other pages */
+#faq-cta { background: var(--color-dark); padding-block: var(--section-padding-sm); }
