@@ -28,6 +28,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -149,6 +151,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ═══════════════════════════════════════════════════════
        NAV
@@ -170,7 +173,7 @@
 
       <a href="https://wa.me/13109355236" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Let's Talk</a>
 
-      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
         <span></span>
         <span></span>
@@ -178,7 +181,7 @@
     </div>
   </header>
 
-  <nav class="nav-mobile" aria-label="Mobile navigation">
+  <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile navigation">
     <a href="services.html">Services</a>
     <a href="portfolio.html" aria-current="page">Portfolio</a>
     <a href="faq.html">FAQ</a>
@@ -186,6 +189,7 @@
     <a href="index.html#contact">Contact</a>
     <a href="https://wa.me/13109355236" class="btn btn-primary" target="_blank" rel="noopener">Let's Talk — WhatsApp</a>
   </nav>
+  <main id="main">
 
 
   <!-- ═══════════════════════════════════════════════════════
@@ -347,7 +351,9 @@
   <!-- ═══════════════════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════════════════ -->
-  <footer id="footer" role="contentinfo">
+  </main>
+
+  <footer id="footer">
     <div class="footer-inner">
 
       <div class="footer-brand">

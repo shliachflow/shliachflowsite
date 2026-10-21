@@ -30,12 +30,12 @@ Tier 1 custom code: Troy camp (featured), Hebrew School of the Arts (Troy), Fred
 A shliach lands, understands within seconds that this is the website and AI person who gets their world, sees proof (real sites), and sends a WhatsApp message.
 
 ## Open decisions
-- Contrast: white on amber `#E07820` is about 3:1 and small amber/blue text on light is below AA. Options: dark text on amber buttons, text-colored links on light surfaces. Needs a palette decision.
 - Hero headline size: CSS is `clamp(3.5rem, 6vw, 5.6rem)` in the split hero, the override doc says `clamp(4.5rem, 11vw + 0.5rem, 10rem)`. Decided by layout; override doc is superseded here.
 - Postal address stays "San Pedro, CA" (contact info and structured data); prose uses "S. Pedro".
 - Pre-filled WhatsApp message (changes the contact URL, needs approval).
 
 ## Decided
-- Orange (amber) leads: buttons, calls to action and the hero's "Flow.". Logo blue stays in the logo and small inline links only.
+- Orange (amber) is the only accent: buttons, calls to action and the hero's "Flow.". The site logo is single-color (white on dark, dark on light) so it doesn't compete; blue is for small inline links only.
+- Contrast: dark text on amber buttons; small amber text on light surfaces uses the deeper amber.
 - Keep "Simplify. Solve. Flow." as the headline. Keep the Dovid H. testimonial as general proof.
 - Hero sub-line stays as is (DAAS is named in the row of three offers).

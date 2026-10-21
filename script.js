@@ -84,12 +84,15 @@
         other.classList.remove('is-open');
         const t = other.querySelector('.faq-toggle');
         if (t) t.textContent = '+';
+        const q = other.querySelector('.faq-question');
+        if (q) q.setAttribute('aria-expanded', 'false');
       });
 
       // Open clicked if it was closed
       if (!isOpen) {
         item.classList.add('is-open');
         if (toggle) toggle.textContent = '×';
+        question.setAttribute('aria-expanded', 'true');
       }
     });
   });

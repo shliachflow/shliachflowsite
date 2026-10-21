@@ -828,7 +828,7 @@ h3 {
   width: auto;
   margin-bottom: 10px;
 }
-.footer-tagline { font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.38); font-style: italic; }
+.footer-tagline { font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.7); font-style: italic; }
 
 .footer-col h4 {
   font-family: var(--font-ui);
@@ -857,7 +857,7 @@ h3 {
   padding: 18px var(--sp-3);
   text-align: center;
 }
-.footer-bottom p { font-family: var(--font-ui); font-size: 12px; color: rgba(255,255,255,0.28); }
+.footer-bottom p { font-family: var(--font-ui); font-size: 12px; color: rgba(255,255,255,0.65); }
 
 /* ── Portfolio Page ─────────────────────────────────────────── */
 .portfolio-page-hero {
@@ -988,7 +988,7 @@ h3 {
 .portfolio-full-grid .portfolio-info p             { color: var(--color-text-muted); font-family: var(--font-body); font-size: 0.9375rem; line-height: 1.55; margin-bottom: 14px; }
 .portfolio-full-grid .portfolio-info a             { color: var(--color-accent); font-family: var(--font-ui); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; transition: gap 0.15s ease; }
 .portfolio-full-grid .portfolio-info a:hover       { gap: 8px; }
-.portfolio-full-grid .portfolio-info .no-link      { font-family: var(--font-ui); font-size: 13px; color: var(--color-text-muted); opacity: 0.5; font-style: italic; }
+.portfolio-full-grid .portfolio-info .no-link      { font-family: var(--font-ui); font-size: 13px; color: var(--color-text-muted); font-style: italic; }
 
 /* Portfolio page responsive */
 @media (max-width: 768px) {
@@ -1428,3 +1428,15 @@ p, blockquote, li { text-wrap: pretty; }
 .portfolio-info a, .portfolio-info a.card-link, .portfolio-full-grid .portfolio-info a {
   color: var(--color-text); text-decoration: underline; text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; text-underline-offset: 4px;
 }
+
+/* Audit fixes */
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 200; background: var(--color-accent); color: var(--color-dark); font-family: var(--font-ui); font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px; }
+.skip-link:focus { top: 1rem; }
+.faq-q-heading { margin: 0; font-size: inherit; line-height: inherit; font-family: inherit; }
+.footer-col h4 { color: rgba(255,255,255,0.7); }
+#portfolio-strip .portfolio-info a { color: #FFFFFF; }
+.nav-mobile .btn-primary { color: var(--color-dark); }
+.footer-col a, .footer-links a { display: inline-block; padding-block: 0.4rem; min-width: 44px; }
+#faq-cta { padding-block: clamp(3rem, 6vw, 4.5rem); border-bottom: 1px solid rgba(255,255,255,0.12); }
+/* Small amber text on light surfaces: use the deeper amber */
+#what-i-do .section-label, #pricing .section-label, #about .section-label, .platform-badge--code, .faq-toggle { color: var(--color-accent-hover); }
