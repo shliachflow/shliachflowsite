@@ -1539,20 +1539,33 @@ h3 {
 #service-tiers { background: var(--color-bg); }
 #how-i-work { background: var(--color-bg-subtle); }
 
-/* Homepage work strip: six projects, 16:9 thumbnails, swipeable on phones */
-.portfolio-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); overflow: visible; }
-.portfolio-grid .portfolio-thumb { height: auto; aspect-ratio: 16 / 9; }
+/* Homepage work strip: one swipeable row of every project */
+.work-controls { display: flex; justify-content: flex-end; gap: 0.5rem; margin: -2.5rem 0 1rem; }
+.work-arrow {
+  width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.3); background: transparent; color: #FFFFFF;
+  font-family: var(--font-ui); font-size: 1.1rem; line-height: 1;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+.work-arrow:hover:not(:disabled) { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.7); }
+.work-arrow:disabled { opacity: 0.3; cursor: default; }
+.portfolio-grid {
+  display: grid; grid-auto-flow: column; grid-template-columns: none;
+  grid-auto-columns: clamp(280px, 29vw, 400px); gap: clamp(1rem, 2vw, 1.5rem);
+  overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  margin-right: calc(50% - 50vw); padding-right: calc(50vw - 50%); padding-bottom: 1rem;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.25) transparent;
+}
+.portfolio-grid:focus-visible { outline-offset: 6px; }
+.portfolio-grid .portfolio-card { scroll-snap-align: start; }
+.portfolio-grid .portfolio-thumb { height: auto; aspect-ratio: 16 / 9; overflow: hidden; }
+.portfolio-grid .portfolio-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 .portfolio-grid .portfolio-info { padding: 1.1rem 1.25rem 1.3rem; }
 .portfolio-grid .portfolio-info h3 { font-size: 1rem; line-height: 1.3; }
-.portfolio-strip-cta { margin-top: clamp(1.75rem, 4vw, 2.75rem); }
+.portfolio-strip-cta { margin-top: clamp(1.25rem, 3vw, 2rem); }
 .portfolio-strip-cta .btn { display: inline-flex; }
-@media (max-width: 1023px) { .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 639px) {
-  .portfolio-grid {
-    display: grid; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 82%;
-    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-    margin-inline: calc(-1 * clamp(1.5rem, 6vw, 5rem)); padding-inline: clamp(1.5rem, 6vw, 5rem);
-    scroll-padding-inline: clamp(1.5rem, 6vw, 5rem); padding-bottom: 0.5rem;
-  }
-  .portfolio-grid .portfolio-card { scroll-snap-align: start; }
+  .portfolio-grid { grid-auto-columns: 82%; margin-inline: calc(-1 * clamp(1.5rem, 6vw, 5rem)); padding-inline: clamp(1.5rem, 6vw, 5rem); scroll-padding-inline: clamp(1.5rem, 6vw, 5rem); }
+  .work-controls { display: none; }
 }
+@media (prefers-reduced-motion: reduce) { .portfolio-grid { scroll-behavior: auto; } }

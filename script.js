@@ -141,3 +141,32 @@
     observer.observe(el);
   });
 })();
+
+/* ── Work strip arrows ─────────────────────────────────────── */
+(function () {
+  const track = document.querySelector('.portfolio-grid');
+  const arrows = document.querySelectorAll('.work-arrow');
+  if (!track || !arrows.length) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function step() {
+    const card = track.querySelector('.portfolio-card');
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    return card ? card.getBoundingClientRect().width + gap : 300;
+  }
+  function update() {
+    const max = track.scrollWidth - track.clientWidth - 2;
+    arrows.forEach(function (a) {
+      const dir = Number(a.dataset.dir);
+      a.disabled = dir < 0 ? track.scrollLeft <= 2 : track.scrollLeft >= max;
+    });
+  }
+  arrows.forEach(function (a) {
+    a.addEventListener('click', function () {
+      track.scrollBy({ left: Number(a.dataset.dir) * step(), behavior: reduce ? 'auto' : 'smooth' });
+    });
+  });
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
