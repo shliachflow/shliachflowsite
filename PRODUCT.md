@@ -6,7 +6,7 @@ Short source of truth for what the site is for. Detailed history lives in `docs/
 Chabad shluchim and Jewish nonprofit leaders who are already stretched (shiurim, fundraising, Yomim Tovim) and want professional digital work done without managing it or explaining their world from scratch.
 
 ## What we want to be known for
-"The website and AI guy for shluchim." Run by Rabbi Yisroel Chaim Shuchat, a fellow shliach in San Pedro, CA.
+"The website and AI guy for shluchim." Run by Rabbi Yisroel Chaim Shuchat, a fellow shliach in S. Pedro, CA.
 
 ## Service hierarchy (confirmed Oct 2026)
 1. **Websites** (flagship): new sites, refreshes, mini sites, camp sites, anything website-related. Custom-coded, or on a platform (Squarespace, ChabadOne, ChabadSuite).
@@ -24,13 +24,17 @@ WhatsApp (310) 935-5236, https://wa.me/13109355236. Email info@shliachflow.com a
 Direct, personal, confident, no corporate language, no em-dash-heavy marketing patter. Speaks like a shliach who has done this for years. Short beats long. Never invent claims, prices, timelines or testimonials.
 
 ## Portfolio (see `portfolio.html`)
-Tier 1 custom code: Troy camp (featured), Hebrew School of the Arts (Troy), Fredericksburg gala, Southern Delaware camp. Tier 2: our own retired Squarespace site (no link). Tier 3: San Pedro /move (ChabadOne), Chabad Chayil campaign (ChabadOne), Union County Torah Center-Chabad (ChabadSuite). Never link to shliachflow.com from the portfolio.
+Tier 1 custom code: Troy camp (featured), Hebrew School of the Arts (Troy), Fredericksburg gala, Southern Delaware camp. Tier 2: our own retired Squarespace site (no link). Tier 3: S. Pedro /move (ChabadOne), Chabad Chayil campaign (ChabadOne), Union County Torah Center-Chabad (ChabadSuite). Never link to shliachflow.com from the portfolio.
 
 ## Success looks like
 A shliach lands, understands within seconds that this is the website and AI person who gets their world, sees proof (real sites), and sends a WhatsApp message.
 
 ## Open decisions
-- Hero headline size: CSS has `clamp(3.5rem, 8vw, 7rem)`, the override doc says `clamp(4.5rem, 11vw + 0.5rem, 10rem)`.
-- Contrast: white on amber `#E07820` is about 3:1; small amber/blue text on light is low. Needs a palette decision.
-- Whether the hero should name websites and AI directly.
+- Contrast: white on amber `#E07820` is about 3:1 and small amber/blue text on light is below AA. Options: dark text on amber buttons, text-colored links on light surfaces. Needs a palette decision.
+- Hero headline size: CSS is `clamp(3.5rem, 6vw, 5.6rem)` in the split hero, the override doc says `clamp(4.5rem, 11vw + 0.5rem, 10rem)`. Decided by layout; override doc is superseded here.
+- Postal address stays "San Pedro, CA" (contact info and structured data); prose uses "S. Pedro".
 - Pre-filled WhatsApp message (changes the contact URL, needs approval).
+
+## Decided
+- Keep "Simplify. Solve. Flow." as the headline. Keep the Dovid H. testimonial as general proof.
+- Hero sub-line stays as is (DAAS is named in the row of three offers).

@@ -1415,3 +1415,7 @@ h3 {
   .nav-hamburger { min-width: 44px; min-height: 44px; }
   .work-arrow { width: 44px; height: 44px; top: calc(var(--work-card-w) * 0.28125 - 22px); }
 }
+
+/* Balanced headings, tidy paragraph endings */
+h1, h2, h3 { text-wrap: balance; }
+p, blockquote, li { text-wrap: pretty; }
