@@ -36,5 +36,6 @@ A shliach lands, understands within seconds that this is the website and AI pers
 - Pre-filled WhatsApp message (changes the contact URL, needs approval).
 
 ## Decided
+- Orange (amber) leads: buttons, calls to action and the hero's "Flow.". Logo blue stays in the logo and small inline links only.
 - Keep "Simplify. Solve. Flow." as the headline. Keep the Dovid H. testimonial as general proof.
 - Hero sub-line stays as is (DAAS is named in the row of three offers).
