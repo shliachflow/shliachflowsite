@@ -1,13 +1,13 @@
 # ShliachFlow Site — Project Memory
 
 ## Read these documents first (in order)
+0. PRODUCT.md and DESIGN.md (repo root) — short current brief and design system; they win over older docs when they differ
 1. docs/website-master-prompt-v3.md — The master design and build framework
 2. docs/shliachflow-design-override.md — ShliachFlow-specific design decisions (palette, fonts, hero, animations, icons)
 3. docs/shliachflow-project-context.md — Portfolio, service tiers, reference sites
 
 ## Project state
-Build in progress. index.html + style.css + script.js fully implement the design override.
-portfolio.html needs full rebuild. Three-tier service section, Substack section, SEO schema not yet added.
+Home, Services, Portfolio and FAQ are built. Positioning was reset in Oct 2026 to websites + AI consulting first, then the DAAS CRM; see PRODUCT.md. Homepage services, meta/schema and FAQ copy already updated; portfolio has 8 projects across three tiers. Next: design pass (hero that names what we do, proof earlier, rhythm/spacing, contrast). Still open: Substack section, hero size and contrast decisions (PRODUCT.md "Open decisions").
 
 ## Key decisions (do not revisit without user confirmation)
 - Tradition: M3 Contemporary Israeli
@@ -25,7 +25,7 @@ portfolio.html needs full rebuild. Three-tier service section, Substack section,
 - Do not add wave dividers between sections
 - Do not use card grids for the services section
 - Do not link to shliachflow.com on the portfolio page (it's being replaced by this site)
-- Do not rewrite copy — use verbatim text from the spec documents
+- Do not rewrite copy on your own — use verbatim text from the spec documents. Exception: services, meta and FAQ wording was deliberately reworked with the user in Oct 2026; further wording changes need their approval
 
 ## Contact info (do not invent or modify)
 - WhatsApp: https://wa.me/13109355236
