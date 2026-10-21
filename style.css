@@ -1580,3 +1580,27 @@ h3 {
   .portfolio-grid { margin-inline: calc(-1 * clamp(1.5rem, 6vw, 5rem)); padding-inline: clamp(1.5rem, 6vw, 5rem); scroll-padding-inline: clamp(1.5rem, 6vw, 5rem); }
 }
 @media (prefers-reduced-motion: reduce) { .portfolio-grid { scroll-behavior: auto; } }
+
+/* Intro with featured quote */
+.intro-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2.5rem, 6vw, 4rem); align-items: center; }
+@media (min-width: 960px) { .intro-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(3rem, 6vw, 6rem); } }
+.intro-quote {
+  margin: 0; position: relative; padding: clamp(1.75rem, 3vw, 2.5rem); border-radius: var(--radius-lg);
+  background: var(--color-bg-subtle); border: 1px solid var(--color-border);
+}
+.intro-quote::before {
+  content: "\201C"; position: absolute; top: 0.1rem; left: 1.25rem; font-family: var(--font-body);
+  font-size: 4.5rem; line-height: 1; color: var(--color-accent); opacity: 0.9;
+}
+.intro-quote blockquote {
+  margin: 1.5rem 0 1.25rem; font-family: var(--font-body); font-style: italic;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.65; color: var(--color-text);
+}
+.intro-quote figcaption { font-family: var(--font-ui); font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+.intro-quote figcaption span { font-weight: 400; color: var(--color-text-muted); margin-left: 0.35rem; }
+
+/* Testimonials: two columns */
+@media (min-width: 900px) {
+  .testimonials-stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-6) clamp(3rem, 6vw, 5rem); align-items: start; }
+  .testimonial-pull blockquote { max-width: none; }
+}
